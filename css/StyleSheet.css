@@ -19,7 +19,11 @@ body{
 main{
     flex:1;
 }
-/*---------------NAV---------------*/
+
+/* =========================
+       NAVBAR
+========================= */
+
 
 .navbar{
     display: flex;
@@ -98,6 +102,43 @@ main{
     font-weight: bold;
     cursor: default;
   }
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 680px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbar {
+      flex-wrap: wrap;
+      padding: 16px 20px;
+    }
+  
+    .nav_list {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 12px;
+    }
+  
+    .nav_list.active {
+      display: flex;
+    }
+  
+    .lang-switch {
+      width: 100%;
+      text-align: right;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+  }
+  
   
 
 /* =========================
@@ -325,9 +366,9 @@ body.projects{
     flex-direction: column;
     align-items: center; /* centraliza tudo horizontal */
     text-align: center;
-  
-    padding-top: 60px;
-  }
+    padding: 80px 16px 40px;
+    justify-content: center;
+ }
 .projects img{
 
     max-width: 150px;   
@@ -343,6 +384,26 @@ body.projects{
     font-size: 18px;
     padding: 10px;
 }
+@media (max-width: 768px) {
+    .projects-container {
+      padding: 64px 16px 32px;
+    }
+  
+    .projects h2 {
+      font-size: 22px;
+      padding: 12px;
+    }
+  
+    .projects p {
+      font-size: 15px;
+      padding: 8px;
+    }
+  
+    .projects img {
+      max-width: 120px;
+    }
+  }
+  
 
 
 
@@ -360,7 +421,7 @@ body.projects{
     max-width: 1100px;
     margin: 100px auto;
     background: #f9f9f9;
-    padding: 80px;
+    padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -442,25 +503,40 @@ body.projects{
   /* =========================
      RESPONSIVO
   ========================= */
-  
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .contact-container {
       grid-template-columns: 1fr;
-      padding: 32px 20px;
-      gap: 40px;
+      margin: 40px auto;
+      padding: 24px 16px;
+      gap: 32px;
     }
   
     .form-row {
       flex-direction: column;
     }
-  }
   
-  @media (max-width: 900px) {
+    .contact-form {
+      padding: 0;
+    }
+  
     .contact-form button {
       width: 100%;
       text-align: center;
     }
+  
+    .contact-text h1 {
+      font-size: 32px;
+    }
+  
+    .contact-text .description {
+      max-width: 100%;
+    }
+  
+    .contact-text .email {
+      margin-top: 32px;
+    }
   }
+  
   
 /* =========================
         FOOTER
