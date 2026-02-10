@@ -27,13 +27,13 @@ main{
     align-items: center;
     background-color:#f6f4f1;
     overflow: hidden;
-    padding: 8px 20px; 
+    padding: 12px 20px; 
 }
 
 .nav_list{
-    list-style: none;      /* tira as bolinhas */
-    display: flex;         /* deixa horizontal */
-    gap: 20px;             /* espaço entre itens */
+    list-style: none;      
+    display: flex;         
+    gap: 20px;           
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -80,7 +80,25 @@ main{
 .logo img{
     height: 40px;
 }
+.lang-switch {
+  text-align: right;
+  font-size: 14px;
+}
 
+.lang-switch a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 4px;
+}
+
+.lang-switch a:hover {
+  text-decoration: underline;
+}
+.lang-switch .active {
+    font-weight: bold;
+    cursor: default;
+  }
+  
 
 /* =========================
        HERO
@@ -270,11 +288,11 @@ box-shadow: 0 15px 15px rgba(0,0,0,0.15);
     .service-cards{
         flex-direction: column;
         gap:20px;
-        margin-top: 30px;
+        margin-top: 15px;
     }
     .card{
-        max-width: 100%;
-        padding: 25px 15px;
+        max-width: 80%;
+        padding: 15px 15px;
     }
     .card h3{
         font-size:20px;
@@ -344,7 +362,7 @@ body.projects{
   
   /* TEXTO */
   .contact-text h1 {
-    font-size: 3rem;
+    font-size: 45px;
     color: rgb(129, 129, 92);
     margin-bottom: 10px;
   }
@@ -371,6 +389,10 @@ body.projects{
   
   /* FORM */
   .contact-form {
+    max-width: 500px;
+    width: 100%;
+    margin:0 auto;
+    padding:1rem;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -385,21 +407,21 @@ body.projects{
   .contact-form textarea {
     width: 100%;
     padding: 12px;
-    font-size: 12px;
+    font-size: 14px;
     border: 1px solid #999;
     background: transparent;
   }
   
   .contact-form textarea {
     min-height: 140px;
-    resize: none;
+    resize: vertical;
   }
   
   /* BOTÃO */
   .contact-form button {
     width: 120px;
     margin-top: 20px;
-    padding: 12px;
+    padding: 14px;
     background: #555;
     color: #fff;
     border: none;
