@@ -1,0 +1,460 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+  }
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex:1;
+}
+/*---------------NAV---------------*/
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#f6f4f1;
+    overflow: hidden;
+    padding: 8px 20px; 
+}
+
+.nav_list{
+    list-style: none;      /* tira as bolinhas */
+    display: flex;         /* deixa horizontal */
+    gap: 20px;             /* espaço entre itens */
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: medium;
+    letter-spacing: 0.5px;
+}
+
+.nav_item{
+
+    text-decoration: none;
+}
+
+.nav_item a {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:black
+}
+
+.nav_item a:hover  {
+    color:olive
+
+}
+
+.nav_item a {
+    position: relative;
+  }
+  
+  .nav_item a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #111;
+    transition: width 0.3s ease;
+  }
+  
+  .nav_item a:hover::after {
+    width: 100%;
+  }
+.logo img{
+    height: 40px;
+}
+
+
+/* =========================
+       HERO
+========================= */
+.hero{
+    height:100vh;
+    background-image: url("/images/hero-bg.png");
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+.hero-content{
+    max-width: 600px;
+    color: rgb(129, 129, 92);
+    text-align: left;
+}
+
+.hero-content h1{
+    font-size: 48px;
+    margin-bottom: 16px;
+    font-weight:bold ;
+}
+
+.hero-content p{
+    font-size: 17px;
+    color: #555;
+}
+
+@media (max-width: 480px) {
+    .hero {
+      justify-content: center;
+      padding: 0 24px;
+    }
+  
+    .hero-content {
+      text-align: center;
+    }
+  }
+
+
+/* =========================
+       ABOUT
+========================= */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 100px;
+    gap: 40px;
+    background-color: #f9f9f9;
+
+}
+
+.about-text{
+    max-width: 600px;
+    margin-left: 80px;
+}
+
+.about-text h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    color:#111;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color:#333;
+    margin-bottom: 60px;
+}
+
+.about-text .btn{
+    display:inline-block;
+    padding: 12px 24px;
+    background-color: #555;;
+    color:#fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.about-text .btn:hover{
+    background-color:#444;
+}
+
+.about-img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba (0,0,0,0.1);
+}
+
+/*Responsive mobile*/
+@media (max-width: 768px){
+#about {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about-text{
+    margin-left: auto;
+}
+
+.about-img {
+    margin-top: 30px;
+}
+
+.about-img img {
+    max-width: 280px;
+    width: 100%;
+}
+}
+
+
+
+/* =========================
+       SERVICE CARDS
+========================= */
+.services {
+    padding: 20px;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color:#111;
+    text-align: center;
+}
+
+.services h2::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #111;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.service-cards{
+    display: flex;
+    gap:30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.card{
+    background-color:rgb(235, 235, 230);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba (0, 0, 0, 0.8);
+    padding: 30px 20px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+transform:translateY(-5px);
+box-shadow: 0 15px 15px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    font-size: 22px;
+    margin-bottom: 1.5;
+    color: rgb(129, 129, 92);
+    font-weight:300;
+    margin-bottom: 15px;
+}
+
+.card p{
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/*Responsive mobile*/
+@media (max-width: 480px){
+    .service-cards{
+        flex-direction: column;
+        gap:20px;
+        margin-top: 30px;
+    }
+    .card{
+        max-width: 100%;
+        padding: 25px 15px;
+    }
+    .card h3{
+        font-size:20px;
+    }
+    .card p{
+        font-size: 15px;
+    }
+}
+
+
+
+/* =========================
+   PROJECTS PAGE LAYOUT
+========================= */
+body.projects{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #fff;
+}
+.projects-container {
+    flex: 1; /* empurra o footer para baixo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza tudo horizontal */
+    text-align: center;
+  
+    padding-top: 60px;
+  }
+.projects img{
+
+    max-width: 150px;   
+    height: auto;
+}
+.projects h2{
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+}
+.projects p{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}
+
+
+
+/* =========================
+   CONTACT PAGE LAYOUT
+========================= */
+
+.contact {
+    background: rgb(235, 235, 230);
+    min-height: 100vh;
+  }
+  
+  /* container geral */
+  .contact-container {
+    max-width: 1100px;
+    margin: 100px auto;
+    background: #f9f9f9;
+    padding: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  
+  /* TEXTO */
+  .contact-text h1 {
+    font-size: 3rem;
+    color: rgb(129, 129, 92);
+    margin-bottom: 10px;
+  }
+  
+  .contact-text .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-text .description {
+    font-size: 0.9rem;
+    max-width: 360px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .contact-text .email {
+    margin-top: 100px;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  /* FORM */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+    border: 1px solid #999;
+    background: transparent;
+  }
+  
+  .contact-form textarea {
+    min-height: 140px;
+    resize: none;
+  }
+  
+  /* BOTÃO */
+  .contact-form button {
+    width: 120px;
+    margin-top: 20px;
+    padding: 12px;
+    background: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .contact-form button:hover{
+    background-color:#444;
+
+  }
+  
+  /* =========================
+     RESPONSIVO
+  ========================= */
+  
+  @media (max-width: 900px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+      padding: 50px 30px;
+    }
+  
+    .form-row {
+      flex-direction: column;
+    }
+  }
+  
+/* =========================
+        FOOTER
+  ========================= */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 10px;
+    background-color: #555;
+}
+
+.footer-social {
+    justify-content: center;
+    display: flex;
+    gap: 16px;
+
+  }
+  
+  .footer-social a {
+    font-size: 14px;
+    color: #000;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .footer-social a:hover {
+    transform: translateY(-2px);
+    opacity: 0.7;
+  }
+  
