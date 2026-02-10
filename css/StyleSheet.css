@@ -503,7 +503,7 @@ body.projects{
   /* =========================
      RESPONSIVO
   ========================= */
-  @media (max-width: 768px) {
+  @media (max-width: 488px) {
     .contact-container {
       grid-template-columns: 1fr;
       margin: 40px auto;
