@@ -408,94 +408,147 @@ body.projects{
 
 
 /* =========================
-       CONTACT PAGE
+   CONTACT PAGE LAYOUT
 ========================= */
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px;
+
+.contact {
+    background: rgb(235, 235, 230);
+    min-height: 100vh;
+  }
+  
+  /* container geral */
+  .contact-container{
+    max-width: 768px;
+    margin: 100px auto;
     background: #f9f9f9;
-}
-
-.contact-text {
-    flex: 1;
-}
-
-.contact-form {
-    flex: 1;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  
+  /* TEXTO */
+  .contact-text h1 {
+    font-size: 45px;
+    color: rgb(129, 129, 92);
+    margin-bottom: 10px;
+  }
+  
+  .contact-text .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-text .description {
+    font-size: 0.9rem;
+    max-width: 360px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .contact-text .email {
+    margin-top: 100px;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  /* FORM */
+  .contact-form {
+    max-width: 500px;
+    width: 100%;
+    margin:0 auto;
+    padding:1rem;
     display: flex;
     flex-direction: column;
     gap: 18px;
-}
-
-.form-row {
+  }
+  
+  .form-row {
     display: flex;
     gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
     padding: 12px;
     font-size: 14px;
     border: 1px solid #999;
     background: transparent;
-}
-
-.contact-form textarea {
+  }
+  
+  .contact-form textarea {
     min-height: 140px;
     resize: vertical;
-}
-
-.contact-form button {
+  }
+  
+  /* BOTÃO */
+  .contact-form button {
     width: 120px;
+    margin-top: 20px;
     padding: 14px;
     background: #555;
     color: #fff;
     border: none;
     cursor: pointer;
-}
+  }
 
-.contact-form button:hover {
-    background-color: #444;
-}
+  .contact-form button:hover{
+    background-color:#444;
 
-/* =========================
-       RESPONSIVO MOBILE
-========================= */
+  }
+  
+  /* =========================
+     RESPONSIVO
+  ========================= */
+
 @media (max-width: 768px) {
+    /* Container principal vira coluna */
     .contact-container {
-        flex-direction: column; /* empilha o texto e o formulário */
-        padding: 20px;
-        gap: 30px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 30px; /* espaço entre texto e formulário */
     }
-
+  
+    /* Form row vira coluna */
+    .form{
+        flex-direction: column; 
+    }
+    
     .form-row {
-        flex-direction: column; /* inputs em coluna */
-        gap: 15px;
+      flex-direction: column;
+      gap: 15px;
     }
-
+  
+    /* Ajuste do formulário */
+    .contact-form {
+      width: 100%;
+      padding: 0;
+    }
+  
     .contact-form button {
-        width: 100%; /* botão ocupa toda largura */
+      width: 100%; /* botão ocupa toda a largura */
+      padding: 14px;
     }
-
+  
+    /* Ajuste do texto */
     .contact-text h1 {
-        font-size: 28px;
+      font-size: 28px;
     }
-
+  
     .contact-text .subtitle,
     .contact-text .description {
-        font-size: 14px;
+      font-size: 14px;
     }
-
+  
     .contact-text .email {
-        margin-top: 20px;
+      margin-top: 20px;
     }
-}
-
+  }
+  
   
 /* =========================
         FOOTER
