@@ -270,7 +270,7 @@ main{
        SERVICE CARDS
 ========================= */
 .services {
-    padding: 40px 20px;
+    padding: 20px 20px;
 }
 
 .services h2 {
@@ -330,15 +330,18 @@ main{
 /* =========================
         RESPONSIVO MOBILE
 ========================= */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .service-cards {
+        display: flex;
         flex-direction: column;
         gap: 20px;
         margin-top: 15px;
+        align-items: center;
+        justify-content: center;
     }
 
     .card {
-        max-width: 80%;
+        max-width: 100%;
         padding: 20px 15px;
     }
 
@@ -502,38 +505,47 @@ body.projects{
   /* =========================
      RESPONSIVO
   ========================= */
-  @media (max-width: 768px) {
+ /* =========================
+   RESPONSIVO MOBILE - CONTACT PAGE
+========================= */
+@media (max-width: 768px) {
+    /* Container principal vira coluna */
     .contact-container {
-        
-      display: flex;          /* troca grid por flex */
-      flex-direction: column; /* empilha os elementos */
-      padding: 24px 16px;
-      gap: 32px;
-    }
-
-    .form-row {
+      display: flex;
       flex-direction: column;
+      padding: 20px;
+      gap: 30px; /* espaço entre texto e formulário */
     }
   
+    /* Form row vira coluna */
+    .form-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    /* Ajuste do formulário */
     .contact-form {
+      width: 100%;
       padding: 0;
     }
   
     .contact-form button {
-      width: 100%;
-      text-align: center;
+      width: 100%; /* botão ocupa toda a largura */
+      padding: 14px;
     }
   
+    /* Ajuste do texto */
     .contact-text h1 {
-      font-size: 32px;
+      font-size: 28px;
     }
   
+    .contact-text .subtitle,
     .contact-text .description {
-      max-width: 100%;
+      font-size: 14px;
     }
   
     .contact-text .email {
-      margin-top: 32px;
+      margin-top: 20px;
     }
   }
   
