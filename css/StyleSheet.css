@@ -33,7 +33,6 @@ main{
     overflow: hidden;
     padding: 12px 20px; 
 }
-
 .nav_list{
     list-style: none;      
     display: flex;         
@@ -45,28 +44,23 @@ main{
     font-weight: medium;
     letter-spacing: 0.5px;
 }
-
 .nav_item{
 
     text-decoration: none;
 }
-
 .nav_item a {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
     color:black
 }
-
 .nav_item a:hover  {
     color:olive
 
 }
-
 .nav_item a {
     position: relative;
-  }
-  
+} 
   .nav_item a::after {
     content: "";
     position: absolute;
@@ -76,11 +70,10 @@ main{
     left: 0;
     background-color: #111;
     transition: width 0.3s ease;
-  }
-  
+} 
   .nav_item a:hover::after{
     width: 100%;
-  }
+}
 .logo img{
     height: 40px;
 }
@@ -88,21 +81,18 @@ main{
   text-align:right;
   font-size:14px;
 }
-
 .lang-switch a {
   text-decoration: none;
   color: #333;
   margin: 0 4px;
 }
-
 .lang-switch a:hover {
   text-decoration: underline;
 }
 .lang-switch .active {
     font-weight: bold;
     cursor: default;
-  }
-
+}
 .menu-toggle {
     display: none;
     font-size: 24px;
@@ -415,23 +405,22 @@ body.projects{
     background: rgb(235, 235, 230);
     min-height: 100vh;
   }
-  
-  /* container geral */
+
   .contact-container{
     max-width: 768px;
-    margin: 100px auto;
+    margin: 50px auto;
     background: #f9f9f9;
     padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 40px;
   }
   
   /* TEXTO */
   .contact-text h1 {
-    font-size: 45px;
+    font-size: 36px;
     color: rgb(129, 129, 92);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .contact-text .subtitle {
@@ -448,7 +437,7 @@ body.projects{
   }
   
   .contact-text .email {
-    margin-top: 100px;
+    margin-top: 40px;
     font-weight: 400;
     text-decoration: underline;
     cursor: pointer;
@@ -456,10 +445,7 @@ body.projects{
   
   /* FORM */
   .contact-form {
-    max-width: 500px;
     width: 100%;
-    margin:0 auto;
-    padding:1rem;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -493,27 +479,30 @@ body.projects{
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: background 0.3s;
   }
 
   .contact-form button:hover{
     background-color:#444;
-
   }
   
   /* =========================
      RESPONSIVO
   ========================= */
 
-@media (max-width: 768px) {
-    .contact-container {
-      display: grid;
-      padding: 20px;
-      gap: 30px; 
-    }
-    .contact-form{
-        display: grid;
-        padding: 10px;    }
+@media (max-width: 768px)   {
+.contact-container {
+    grid-template-columns: 1fr; /* empilha texto e form */
+    padding: 20px;
+    gap: 30px;
 }
+.form-row {
+    flex-direction: column; /* inputs em coluna */
+}
+.contact-form button {
+    width: 100%; /* botão ocupa toda largura */
+}
+
 /* =========================
         FOOTER
 ========================= */
