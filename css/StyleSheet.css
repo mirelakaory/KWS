@@ -105,8 +105,12 @@ main{
     }
   
     .navbar {
-      flex-wrap: wrap;
-      padding: 16px 20px;
+      position: relative;
+      align-items: center;
+    }
+
+    .logo {
+      display: none;
     }
   
     .nav_list {
@@ -122,15 +126,15 @@ main{
     }
   
     .lang-switch {
-      width: 100%;
-      text-align: right;
-      font-size: 13px;
-      margin-top: 8px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0; /* remove aquele margin-top: 8px */
+      }
+  
+  
     }
-  }
-  
-  
-
 /* =========================
        HERO
 ========================= */
@@ -154,9 +158,9 @@ main{
 }
 
 .hero-content h1{
-    font-size: 48px;
+    font-size: 40px;
     margin-bottom: 16px;
-    font-weight:bold ;
+    font-weight:600;
 }
 
 .hero-content p{
@@ -195,7 +199,7 @@ main{
 }
 
 .about-text h2{
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 20px;
     color:#111;
 }
@@ -264,7 +268,7 @@ main{
 }
 
 .services h2 {
-    font-size:36px;
+    font-size:34px;
     margin-bottom:20px;
     color: #111;
     text-align:center;
@@ -511,14 +515,22 @@ body.projects{
 #process {
     padding: 80px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #f6f4f1;;
 }
 
 #process h2 {
-    font-size: 2rem;
+    font-size: 34px;
     margin-bottom: 40px;
 }
-
+#process h2::after {
+    content:"";
+    display:block;
+    width:60px;
+    height:4px;
+    background: #111;
+    margin:12px auto 0;
+    border-radius:2px;
+}
 .process-steps {
     display: flex;
     justify-content: center;
@@ -562,7 +574,7 @@ body.projects{
 .contact-button {
     display: inline-block;
     padding: 12px 28px;
-    background-color: #000;
+    background-color: rgb(129, 129, 92);
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
