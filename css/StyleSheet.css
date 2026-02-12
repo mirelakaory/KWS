@@ -157,13 +157,23 @@ main{
     text-align: left;
 }
 
-.hero-content h1{
-    font-size: 40px;
+.hero-brand {
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgb(36, 36, 36);
     margin-bottom: 16px;
-    font-weight:600;
-}
+    font-weight: 500;
+  }
+  
+  .hero-content h1 {
+    font-size: 44px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
 
-.hero-content p{
+.hero-description {
     font-size: 17px;
     color: #555;
 }
