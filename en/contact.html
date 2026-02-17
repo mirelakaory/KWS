@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato | KWS </title>
+  <title>Contact | KWS </title>
   <link rel="stylesheet" href="/css/StyleSheet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-
 </head>
 
 
@@ -16,36 +15,37 @@
 
     <header>
         <nav class="navbar"> 
-          <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             <div class="logo">
                 <a href = "index.html"> 
                     <img src="/images/logo.png" alt="Logo">
                 </a>    
             </div>
             <ul class="nav_list">
-                <li class="nav_item"><a href="index.html"class="nav_link">Início</a></li> 
-                <li class="nav_item"><a href="projects.html" class="nav_link">Projetos</a></li>  
+                <li class="nav_item"><a href="index.html"class="nav_link">Home</a></li> 
+                <li class="nav_item"><a href="/en/projects.html" class="nav_link">Projects</a></li>  
             </ul>
             <div class="lang-switch">
-              <a href="/contact.html">EN </a>|
-              <span class="active">PT</span>
+                <span class="active">EN </span>|
+                <a href="/contact.html">PT</a>
             </div>
         </nav>
     </header>
 
     <main class="contact-container">
         <div class="contact-text">
-          <h1>Entre em contato</h1>
-          <p class="subtitle">Gostaria de ouvir sua opinião!</p>
+          <h1>Get in Touch</h1>
+          <p class="subtitle">I'd like to hear from you!</p>
       
           <p class="description">
-            Se tiver alguma dúvida ou simplesmente quiser dizer olá,
-            use o formulário de contato!
+            If you have any inquiries or just want to say hi,
+            please use the contact form!
           </p>
       
           <p class="email">kaorywebstudio@gmail.com</p>
         </div>
-      
+        
+        <div class="form">
         <form id="contact-form" class="contact-form">
             <div class="form-row">
               <input type="text" name="first_name" placeholder="First Name" required>
@@ -56,32 +56,32 @@
           
             <textarea name="message" placeholder="Message" required></textarea>
           
-            <button type="submit">Enviar</button>
+            <button type="submit">Send</button>
           </form>
-          
+        </div>
           <!-- EmailJS CDN -->
           <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-          <script src="contact.js"></script>
-          
+          <script src="contact.js"></script>    
+
     </main>
 
     <footer class="footer">
         <div class="footer-container">
-          <p>© 2026 KWS. Todos os direitos reservados.</p>
+          <p>© 2026 KWS. All rights reserved.</p>
       
-          <div class="footer-social">
-            <a href="https://github.com/mirelakaory" target="_blank" aria-label="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
+            <div class="footer-social">
+                <a href="https://github.com/mirelakaory" target="_blank" aria-label="GitHub">
+                 <i class="fa-brands fa-github"></i>
+                </a>
       
-            <a href="https://linkedin.com/in/mirelahangai" target="_blank" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
+                <a href="https://linkedin.com/in/mirelahangai" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+                </a>
       
-            <a href="https://instagram.com/mirelakaory" target="_blank" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </div>
+                <a href="https://instagram.com/mirelakaory" target="_blank" aria-label="Instagram">
+                 <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
         </div>
     </footer>
     <script src="/menu.js"></script>

@@ -1,8 +1,7 @@
 function toggleMenu() {
-    document
-      .querySelector('.nav_list')
-      .classList.toggle('active');
-  }
+  const nav = document.querySelector(".nav_list");
+  nav.classList.toggle("active");
+}
 
   
   
