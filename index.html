@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="/css/StyleSheet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
         
 
 
@@ -50,10 +51,11 @@
 
 
             <section class="hero">
+                <div id="particles-js"></div>
                 <div class="hero-content">
-                    <p class="hero-brand">Kaory Web Studio</p>
-                    <h1>Criação e Design de Sites e Landing Pages no Japão</h1>
-                    <p class="hero-description">Sites profissionais, modernos e responsivos para empresas e autônomos no Japão.</p>
+                        <p class="hero-brand">Kaory Web Studio</p>
+                        <h1>Criação e Design de Sites <br>e Landing Pages no Japão</h1>
+                        <p class="hero-description">Sites profissionais, modernos e responsivos para empresas e autônomos no Japão.</p>
                 </div>
             </section>
 
@@ -76,7 +78,14 @@
 
 
         <section class="services content-section">
-            <h2>Serviços</h2>
+            <div class="section-title">
+                <h2>Serviços</h2>
+                <img src="images/services.png"  alt="Ícone Serviços" class="title-icon"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-delay="200">
+                
+            </div>
             <div class="service-cards">
                 <div class="card">
                     <h3>Criação de Sites</h3>
@@ -92,30 +101,44 @@
                 </div>
                 <div class="card">
                     <h3> Manutenção de sites</h3>
-                    <p>>Atualizações e melhorias contínuas para manter seu site seguro e eficiente.</p>
+                    <p>Atualizações e melhorias contínuas para manter seu site seguro e eficiente.</p>
                 </div>
             </div>
             </section>
         </section>
 
         <section id="process">
-            <h2>Como funciona</h2>
-          
-            <div class="process-steps">
-              <div class="process-step">
-                <h3>01. Planejamento</h3>
-                <p>Definimos as metas e planejamos a estrutura do seu site.</p>
-              </div>
-          
-              <div class="process-step">
-                <h3>02. Design e Desenvolvimento</h3>
-                <p>Desgin moderno com código limpo e otimizado.</p>
-              </div>
-          
-              <div class="process-step">
-                <h3>03. Publicação e Otimização</h3>
-                <p>Seu site funcionando totalmente otimizado!</p>
-              </div>
+            
+            <div class="process-container">
+                <div class="process-title">
+                    <h2>Como funciona</h2>
+                </div>
+
+                <div class="process-content">
+                    <div class="process-image"> 
+                        <img src="/images/howitworks.png" alt="Como-funciona"> 
+                    </div>
+
+                    <div class="process-steps">
+                                           <div class="process-step">
+                            <img src="/images/planning.png" class="step-icon" alt="">
+                            <h3>01. Planejamento</h3>
+                            <p>Definimos as metas e planejamos a estrutura do seu site.</p>
+                        </div>
+            
+                        <div class="process-step">
+                            <img src="/images/design.png" class="step-icon" alt="">
+                            <h3>02. Design e Desenvolvimento</h3>
+                            <p>Design moderno com código limpo e otimizado.</p>
+                        </div>
+            
+                        <div class="process-step">
+                            <img src="/images/publishing.png" class="step-icon" alt="">
+                            <h3>03. Publicação e Otimização</h3>
+                            <p>Seu site funcionando totalmente otimizado!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
           
@@ -143,12 +166,36 @@
                 <a href="https://instagram.com/mirelakaory" target="_blank" aria-label="Instagram">
                   <i class="fa-brands fa-instagram"></i>
                 </a>
+
+                <a href="https://wa.me/819067552519?text=Olá%20gostaria%20de%20um%20orçamento" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
               </div>
             </div>
         </footer>
 
         <script src="/menu.js"></script>
-                 
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS("particles-js", {
+              particles: {
+                number: { value: 50 },
+                size: { value: 3 },
+                color: { value:"#dbe4d3"},
+                line_linked: {
+                  enable: true,
+                  color: "#dbe4d3"
+                },
+                move: { speed: 2 }
+              }
+            });
+            </script>
+        
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+         AOS.init();
+        </script>
     </body>
 
 

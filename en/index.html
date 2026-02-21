@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="/css/StyleSheet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 
     </head>
@@ -47,12 +48,12 @@
                 </div>
             </nav>
 
-
             <section class="hero">
+                <div id="particles-js"></div>
                 <div class="hero-content">
-                    <p class="hero-brand">Kaory Web Studio</p>
-                    <h1>Website and Landing Page Development in Japan</h1>
-                    <p class="hero-description">Professional, Modern & Responsive Websites for Businesses and Freelancers in Japan</p>
+                        <p class="hero-brand">Kaory Web Studio</p>
+                        <h1>Website and Landing Page Development in Japan</h1>
+                        <p class="hero-description">Professional, Modern & Responsive Websites for Businesses and Freelancers in Japan</p>
                 </div>
             </section>
 
@@ -73,7 +74,14 @@
 
 
         <section class="services content-section">
-            <h2>Services</h2>
+            <div class="section-title">
+                <h2>Services</h2>
+                <img src="/images/services.png"  alt="Ícone Serviços" class="title-icon"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-delay="200">
+                
+            </div>
             <div class="service-cards">
                 <div class="card">
                     <h3>Website Development</h3>
@@ -95,24 +103,39 @@
             </section>
         </section>
 
+
         <section id="process">
-            <h2>How it works</h2>
-          
-            <div class="process-steps">
-              <div class="process-step">
-                <h3>01. Planning</h3>
-                <p>We define your goals and plan your website structure.</p>
-              </div>
-          
-              <div class="process-step">
-                <h3>02. Design and Development</h3>
-                <p>Modern design built with clean, optimized code.</p>
-              </div>
-          
-              <div class="process-step">
-                <h3>03. Launch and Optimization</h3>
-                <p>Your website fully optimized and ready to perform!</p>
-              </div>
+            
+            <div class="process-container">
+                <div class="process-title">
+                    <h2>How it works</h2>
+                </div>
+
+                <div class="process-content">
+                    <div class="process-image"> 
+                        <img src="/images/howitworks.png" alt="Como-funciona"> 
+                    </div>
+
+                    <div class="process-steps">
+                                           <div class="process-step">
+                            <img src="/images/planning.png" class="step-icon" alt="">
+                            <h3>01. Planning</h3>
+                            <p>We define your goals and plan your website structure.</p>
+                        </div>
+            
+                        <div class="process-step">
+                            <img src="/images/design.png" class="step-icon" alt="">
+                            <h3>02. Design and Development</h3>
+                            <p>Modern design built with clean, optimized code.</p>
+                        </div>
+            
+                        <div class="process-step">
+                            <img src="/images/publishing.png" class="step-icon" alt="">
+                            <h3>03. Launch and Optimization</h3>
+                            <p>Your website fully optimized and ready to perform!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
           
@@ -140,12 +163,34 @@
                 <a href="https://instagram.com/mirelakaory" target="_blank" aria-label="Instagram">
                   <i class="fa-brands fa-instagram"></i>
                 </a>
+
+                <a href="https://wa.me/819012345678?text=Hello%20I%20would%20like%20a%20website%20quote" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
               </div>
             </div>
         </footer>
 
         <script src="/menu.js"></script>
-                 
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS("particles-js", {
+              particles: {
+                number: { value: 50 },
+                size: { value: 3 },
+                color: { value:"#dbe4d3"},
+                line_linked: {
+                  enable: true,
+                  color: "#dbe4d3"
+                },
+                move: { speed: 2 }
+              }
+            });
+            </script>
+            <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+       <script>
+        AOS.init();
+        </script>
     </body>
 
 
